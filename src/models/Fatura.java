@@ -3,6 +3,7 @@ package models;
 import java.util.List;
 
 public class Fatura {
+    private int id;
     private Cliente cliente;
     private List<Item> items;
     private double valorTotal;
@@ -17,6 +18,21 @@ public class Fatura {
         this.cliente = null;
         this.items = null;
         this.valorTotal = 0;
+    }
+
+    public Fatura(int id, Cliente cliente, List<Item> items, double valorTotal) {
+        this.id = id;
+        this.cliente = cliente;
+        this.items = items;
+        this.valorTotal = valorTotal;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public void setCliente(Cliente cliente) {

@@ -55,9 +55,10 @@ public class Main {
         }
 
         Fatura fatura = new Fatura(clienteFiltrado, items, valorTotal);
+        faturas.add(fatura);
 
         System.out.println(" ==== Fatura ====");
-        System.out.println(fatura);
+        System.out.println(faturas);
     }
 
     public static void imprimirLista(List list){
