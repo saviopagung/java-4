@@ -1,11 +1,11 @@
 package models;
 
-public class Crud <T>{
-    private T obj;
+import java.util.ArrayList;
 
-    public Crud(T obj) {
-        this.obj = obj;
-    }
-
-
+public interface Crud <T>{
+    void criar(T obj);
+    void editar(T obj);
+    T buscar(int id);
+    ArrayList<T> listar();
+    void deletar(T obj);
 }
